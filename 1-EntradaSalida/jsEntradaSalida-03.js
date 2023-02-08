@@ -1,18 +1,37 @@
-/*
-Debemos lograr tomar un dato por 'ID'
-y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
+/* Se ingresará por id el valor de una compra de productos para el hogar. Se deberá agregar el iva (21%) y 
+luego se deberá restar el 5% en concepto de compra mayorista. El programa deberá mostrar por alert importe bruto, 
+el iva, el importe con iva, el valor del descuento y el total a pagar.
+*/
+
 function mostrar()
 {
-	//Declaro la variable nombreIngresado
-	let nombreIngresado;
+	let producto;
 
-	//Asigno a nombreIngresado .value, y, busco si coincide en archivo HTML el id "txtIdNombre.value"
-	nombreIngresado=txtIdNombre.value;
-	//nombreIngresado=document.getElementById("txtIdNombre"),value;
+	producto = txtIdNombre.value;
+	producto = parseFloat(producto)
 
-	//Muestro por alert
-	alert(nombreIngresado);
+	let iva;
+	let productoConIva;
+	let descuento;
+	let totalAPagar;
+
+	iva = producto * 21 / 100;
+	iva = parseFloat(iva);
+	
+	productoConIva = producto + iva;
+	productoConIva = parseFloat(productoConIva);
+	
+	descuento = producto * 05 / 100;
+	descuento = parseFloat(descuento);
+	
+	totalAPagar = productoConIva - descuento;
+	totalAPagar = parseFloat(totalAPagar);
+
+	alert("El importe bruto es de: " + producto.toFixed(2) + 
+	" \nEl IVA (21%) es de: " + iva.toFixed(2) +
+	" \nEl producto con IVA es de: " + productoConIva.toFixed(2) + 
+	" \nEl descuento es de: " + descuento.toFixed(2) +
+	" \nSiendo el precio final: " + totalAPagar.toFixed(2));
+
 
 }
-
-
