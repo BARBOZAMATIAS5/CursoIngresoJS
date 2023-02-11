@@ -1,6 +1,9 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	let numaleatorio;
 
-}//FIN DE LA FUNCIÓN
+	numaleatorio = Math.floor(Math.random()* 10 + 1);
+
+	console.log(numaleatorio);
+//usar console.log cuando haya que hacer muchas pruebas para corroborar 
+}
