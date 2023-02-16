@@ -63,13 +63,15 @@ function CalcularPrecio() {
         }
     } else{
         precioFinal = precioBruto;
+
     }
-
-    txtIdprecioDescuento.value = precioFinal.toFixed("2");
-
     if(precioFinal >= 120){
         impuestoiibb = precioFinal * 10 /100 ;
         precioFinal = precioFinal + impuestoiibb;
-        alert("impuesto Usted pagó: " + impuestoiibb);
+        alert("IIBB Usted pagó: " + impuestoiibb);
     }
+
+    txtIdprecioDescuento.value = precioFinal.toFixed("2");
 }
+
+
