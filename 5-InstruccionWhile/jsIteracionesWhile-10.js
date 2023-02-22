@@ -9,15 +9,16 @@ hasta que el usuario quiera, mostrar:
 6-Cantidad de números pares.
 7-Promedio de positivos.
 8-Promedios de negativos.
-9-Diferencia entre positivos y negativos, (positvos-negativos). */
+9-Diferencia entre positivos y negativos, (positivos-negativos). */
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let sumaNegativos = 0;
+	let sumaPositivos = 0;
 
-	respuesta="si";
+	respuesta = "si";
 
 	while(respuesta=="si")
 	{
@@ -26,4 +27,4 @@ function mostrar()
 	}//fin del while
 
 	document.write("la suma de negativos es :"+sumaNegativos);
-}//FIN DE LA FUNCIÓN
+}//FALTA ENTREGAR ESTE EJERCICIO.
